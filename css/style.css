@@ -1,0 +1,941 @@
+@charset"utf-8";
+
+/*font-family: 'Vollkorn', serif;
+
+/*----------共通項--------------------------------------*/
+body{ /*ページの余白をなくす*/
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+}
+
+p,h1,h2,li{ /*h1とpの上の余白をなくす*/
+  margin-top:0;
+  font-family: 'Josefin Sans', sans-serif;
+  color:#504946;
+}
+
+/*img{ /*画像下の余白をなくす*/
+  vertical-align: bottom;
+}*/
+
+ul{　/*リスト項目(story/about/)の余白をなくす*/
+  margin:0;
+  padding:0;
+}
+
+a{ /*訪問前は下線なし*/
+  text-decoration: none;
+}
+
+#wrap { /*floatプロパティを解除する*/
+  clear:both;
+  margin:0;
+  padding:0; 
+  height:100%;
+  color: #fff;
+  padding:0px 40px;
+}
+
+header{
+  width:100%;
+  height:20px;
+}
+
+footer{
+  width:100%;
+  text-align:center;
+  color:#504946;
+  margin:120px 0 0 0;
+  font-family: 'Josefin Sans', sans-serif;
+  float:left;
+}
+
+footer small{
+  font-size:12px;
+}
+/*----------共通項--------------------------------------*/
+
+
+/*----------スライドバー--------------------------------------*/
+.sidebar {
+  position: relative;
+  top:40px;
+  left: -400px;
+  width: 400px;
+  height: 550px;
+  background-color: rgba(240, 240, 240, 0.9);
+  z-index: 5;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.sidebar li {
+  padding: 10px;
+  width:auto;
+}
+
+.sidebar li a {
+  margin-left:30px;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  text-align: left;
+  text-decoration: none;
+  line-height: 40px;
+  color: #333333;
+  font-weight: 300;
+  font-size:30px;
+}
+
+.sidebar li a:hover{
+  animation: fluffy1 3s ease infinite;
+}
+
+@keyframes fluffy1 {
+  0% { transform:translateY(0) }
+  5% { transform:translateY(0) }
+  10% { transform:translateY(0) }
+  20% { transform:translateY(-10px) }
+  25% { transform:translateY(0) }
+  30% { transform:translateY(-10px) }
+  50% { transform:translateY(0) }
+  100% { transform:translateY(0) }
+}
+
+#about {
+  margin-left:30px;
+  width: 125px;
+  height: auto;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  line-height: 40px;
+  color: #333;
+  font-weight: 300;
+  font-size:30px;
+}
+
+.sidebar p{
+  margin:0px auto 0 40px;
+  height:30px;
+  padding-top: 30px;
+}
+
+.sub-nav{
+  display:none;
+  position: right;
+}
+
+.sub-nav li{
+  float:none;
+  margin:0 0 0 40px;
+  background-color: rgba(255,255,255,0.7);
+  width:300px;
+}
+
+.sub-nav li a {
+  display: inline-block;
+}
+
+.button a {
+  color: #fff;
+  position: absolute;
+  top: 0px;
+  left: 400px;
+  display: block;
+  width: 30px;
+  height: 70px;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.open:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-tansform: rotate(45deg);
+}
+
+.sidebar li a:hover{
+  border-bottom:1px dotted rgba(0,0,0,0.4);
+}
+
+.close:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #CCC;
+    border-left: 1px solid #CCC;
+    transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-tansform: rotate(-45deg);
+}
+/*----------スライドバー--------------------------------------*/
+
+
+/*----------TOP--------------------------------------*/
+.box1 h1 {
+  font-size:35px;
+  font-family: 'Vollkorn', serif;
+  border:none;
+  margin:30px 0 0 60px;
+  font-weight: 600;
+  width:200px;
+}
+
+.box1 h2 {
+  font-size: 20px;
+  font-family: 'Vollkorn', serif;
+  margin:0 0 0px 60px;
+  font-weight:400;
+  width:200px;
+}
+
+.box1 p {
+  font-size: 12px;
+  font-family: 'Vollkorn', serif;
+  margin:83px 0 0px 60px;
+  font-weight:400;
+  width:200px;
+}
+
+.box1 .content{ /*h1の上の余白*/
+  display: block;
+  float:left;
+  margin-top:70px;
+}
+
+.box1 button {
+  background-color:#504946;
+  color:#fff;
+  font-size:10px;
+  width:50px;
+  display:block;
+  text-align:center;
+  line-height:50px;　/*ボタンの縦のサイズ*/
+  margin-left:0px;
+  border-radius:100px; /*ボタンの角*/
+}
+
+.box1 button:hover{
+  text-decoration:none;
+  background-color:#fff ;
+  color:#504946;
+  font-weight: 300;
+  border:0.5px solid #504946;
+  border-radius:0;
+  box-sizing: border-box;
+}
+
+.water{
+  display:block;
+  float:left;
+  background-image:url(../images/301877.jpg);
+  background-size:cover;
+  background-position:0 -20px; 
+  width:750px;
+  height:400px;
+  top:100px;
+  left:40px;
+  right:0;
+  bottom:0;
+}
+
+.iziModal_iframe{
+  max-width:950px !important;
+}
+/*----------TOP--------------------------------------*/
+
+/*----------STORY--------------------------------------*/
+.story{
+  background-color:#ffffff;
+  margin:30px 0 0 0;
+}
+
+#story .content{
+  padding: 30px 60px 20px;
+  float:left;
+}
+
+#story h1{
+  margin-top:40px;
+  margin-bottom: 0;
+  color: #504946;
+  font-size: 40px;
+  text-align: center;
+}
+
+#story p{
+  color: #504946;
+  font-size:15px;
+  font-family: 'Vollkorn', serif;
+  line-height: 30px;
+  width:470px;
+}
+
+#story .content-img{
+  width:450px;
+  margin-top:80px;
+  margin-left:0px;
+  box-shadow:0 5px 5px 0 rgba(0,0,0,0.8);
+}
+
+#story .under-img{
+  background-color: #000;
+  padding: 0 60px;
+  float:left;
+  height:150px;
+}
+
+.content-img2, .content-img3, .content-img4, .content-img5{
+  width:240px;
+  height:125px;
+  margin-top: 12px;
+}
+/*----------STORY--------------------------------------*/
+
+
+/*----------ABOUT--------------------------------------*/
+.cast{
+  background-color:#fff;
+  width:50%;
+  height:550px;
+  float:left;
+  position:relative;
+  top:50px;
+}
+
+.cast img{
+  width: 100%;
+  filter: grayscale(100%);
+}
+
+.overlay{
+  width:45%;
+  height:45%;
+  border-radius: 50%;
+  background-image: url(../images/301874.jpg);
+  background-size: 225%;
+  background-position: -31px -10px;
+  position:relative;
+  margin-top:-313px;
+  margin-left:25px;
+  border:0.5px solid rgba(255,255,255,0.3);
+  box-shadow:5px 5px 10px rgba(0,0,0,0.2)inset;
+}
+
+.overlay:hover  {
+  background-size: 260%;
+  transition-duration: 2s;
+  cursor:pointer;
+}
+
+.cast-img2{
+  width:35%;
+  height:44%;
+  border-radius: 0%;
+  background-image: url(../images/301865.jpg);
+  background-size:300%; 
+  background-position: -190px -80px;
+  margin-top:65px;
+  margin-left: 0px;
+  filter: grayscale(100%);
+}
+
+.cast-img2:hover{
+  filter: grayscale(0%);
+}
+
+.cast h1 {
+  width:100px;
+  position: absolute;
+  text-align:right;
+  padding: 0px;
+  background: linear-gradient(90deg ,#af862d,#eac960,#2c2209);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color: black;
+  float:left;
+  top:330px;
+  left:450px;
+  font-size:40px;
+  font-weight: 600;
+}
+
+.cast p{
+  position: absolute;
+  text-align:right;
+  padding: 0px;
+  color:#504946;
+  float:left;
+  top:370px;
+  left:450px;
+  font-size:15px;
+  font-weight: 300;
+}
+
+.cast-img3{
+  width: 64%;
+  height: 30%;
+  border-radius: 0%;
+  background-image: url(../images/the-fall-12-1024x552.jpg);
+  background-size: 100%;
+  background-position: 0px -15px;
+  margin-top: -165px;
+  filter: grayscale(0%);
+  float: right;
+}
+
+.cast-img3:hover{
+  filter: grayscale(100%);
+}
+
+.director{
+  width: 49%;
+  height:600px;
+  float:right;
+  margin-top:25px;
+  margin-left: 5px;
+}
+
+.director-txt h1{
+  background: linear-gradient(90deg ,#2c3384,#5a1f0d,#8ea3c0);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color: black;
+  font-size:40px;
+  margin-top:0px;
+  margin-left:20px;
+  margin-bottom:0;
+  line-height: 40px;
+  float:left;
+  font-weight: 600;
+}
+   
+.director-txt p {
+  color:  #504946;
+  width:150px;
+  float:right;
+  margin-top:10px;
+  font-family: 'Vollkorn', serif;
+  line-height: 20px;
+  font-size: 11px;
+  text-align: right;
+}
+
+.director-img{
+  background-image: url(../images/11.jpg);
+  filter: grayscale(100%);
+  display: inline-block;
+  width:100%;
+  height:79%;
+  border-radius: 0%;
+  background-size:130%;
+  background-position: -155px -160px;
+  float:left;
+  margin-top:12px;
+  margin-left:10px;
+}
+
+.overlay2{
+  display: inline-block;
+  width:45%;
+  height:40%;
+  border-radius: 50%;
+  background-image: url(../images/11.jpg);
+  background-size: 305%;
+  background-position: -455px -315px;
+  position:relative;
+  margin-top:225px;
+  margin-left:-275px;
+  border:0.5px solid rgba(255,255,255,0.3);
+  box-shadow:5px 5px 10px rgba(0,0,0,0.2)inset;
+}
+
+.overlay2:hover  {
+  background-size: 330%;
+  transition-duration: 2s;
+  cursor:pointer;
+}
+/*----------ABOUT--------------------------------------*/
+
+/*----------CAST--------------------------------------*/
+.center h1{
+  font-size:40px;
+  font-weight:600;
+  color: #504946;
+  margin-left:470px;
+  margin-bottom: 10px;
+}
+
+.center p{
+  font-size:20px;
+  font-weight:300;
+  color: #504946;
+  margin-left:460px;
+}
+
+.roy{
+  display: inline-block;
+  
+}
+
+.roy img {
+  width:220px;
+  height:350px;
+  object-fit: cover;
+  object-position: -125px 0;
+  margin-top:20px;
+  margin-left:85px;
+}
+
+.alex{
+  display: inline-block;
+}
+
+.alex img {
+  width:220px;
+  height:350px;
+  object-fit: cover;
+  object-position: -125px 0 80%;
+  margin-top:0px;
+  margin-left:100px;
+}
+
+.darwin{
+  display: inline-block;
+}
+
+.darwin img {
+  width:220px;
+  height:350px;
+  object-fit: cover;
+  object-position: -125px 0 80%;
+  margin-top:0px;
+  margin-left:100px;
+  clear:left;
+}
+
+.character{
+  width:300px;
+}
+
+.roy h2{
+  font-size:15px;
+  font-weight:300;
+  color: #504946;
+  font-family: 'Vollkorn', serif;
+  margin-left:90px;
+  margin-bottom:0;
+  margin-top:20px;
+  line-height: 20px;
+  margin-right:0;
+}
+
+.roy p{
+  font-size:10px;
+  font-weight:600;
+  color: #504946;
+  font-family: 'Vollkorn', serif;
+  margin-top:0px;
+  margin-left:90px;
+  margin-right:0;
+  line-height: 20px;
+}
+
+.alex h2{
+  font-size:15px;
+  font-weight:300;
+  color: #504946;
+  font-family: 'Vollkorn', serif;
+  margin-left:105px;
+  margin-bottom:0;
+  margin-top:20px;
+  line-height: 20px;
+  margin-right:0;
+}
+
+.alex p{
+  font-size:10px;
+  font-weight:600;
+  color: #504946;
+  font-family: 'Vollkorn', serif;
+  margin-top:0px;
+  margin-left:105px;
+  margin-right:0;
+  line-height: 20px;
+}
+
+.darwin h2{
+  font-size:15px;
+  font-weight:300;
+  color: #504946;
+  font-family: 'Vollkorn', serif;
+  margin-left:105px;
+  margin-bottom:0;
+  margin-top:20px;
+  line-height: 20px;
+  margin-right:0;
+}
+
+.darwin p{
+  font-size:10px;
+  font-weight:600;
+  color: #504946;
+  font-family: 'Vollkorn', serif;
+  margin-top:0px;
+  margin-left:105px;
+  margin-right:0;
+  line-height: 20px;
+}
+
+
+
+/*----------ポップアップ表示---------------*/
+.lee{
+  background-image: url(../images/roy2.jpg);
+  margin-top:0px;
+  width:auto;
+  height:340px;
+  background-size: 105%;
+  margin-left:0;
+}
+
+.Catinca{
+  background-image: url(../images/alexandria2.jpg);
+  margin-top:0px;
+  width:auto;
+  height:340px;
+  background-size: 105%;
+  margin-left:0;
+}
+
+.Leo{
+  background-image: url(../images/darwin2.jpg);
+  margin-top:0px;
+  width:auto;
+  height:340px;
+  background-size: 105%;
+  margin-left:0;
+}
+
+
+/*-----スライド設定-----*/
+.slide-dots {
+  text-align: center;
+  display:inline-block;
+  position:relative;
+  content:'▲';
+  margin-top:0;
+}
+
+button{
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.slide-arrow{
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.prev-arrow{
+  left: -40px;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 15px solid #504946;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.next-arrow{
+  right: -40px;
+  width: 0;
+  height: 0;
+  border-right: 0 solid transparent;
+  border-left: 15px solid #504946;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+/*-----スライド設定-----*/
+
+/*----------CAST--------------------------------------*/
+
+
+/*----------PRODUCTION TEAM---------------------------*/
+#production_team{
+  font-size:40px;
+  font-weight:600;
+  color: #504946;
+  margin-left:350px;
+  margin-bottom: 40px;
+  width:320px;
+}
+
+.d-img{
+  background-image: url(../images/director.jpg);
+  margin-top:0px;
+  width:400px;
+  height:130px;
+  background-size: 100%;
+  background-position: 0 -40px;
+  margin-left:30px;
+  float:left;
+}
+
+.desiner-img{
+  background-image: url(../images/301864.jpg);
+  margin-top:0px;
+  width:400px;
+  height:130px;
+  background-size: 100%;
+  background-position: 0 -60px;
+  margin-left:30px;
+  float:left;
+}
+
+.writer-img{
+  background-image: url(../images/301873.jpg);
+  margin-top:0px;
+  width:400px;
+  height:130px;
+  background-size: 100%;
+  background-position: 0 -20px;
+  margin-left:30px;
+  float:left;
+}
+
+.staff{
+  height:170px;
+}
+
+.staff-txt{
+  width:600px;
+  height:150px;
+  float:right;
+  right:60px;
+  padding:10px;
+}
+
+.staff h2 {
+  font-size:15px;
+  display: inline-block;
+  font-weight:600;
+  color: #504946;
+  font-family: 'Vollkorn', serif;
+  margin-bottom:5px;
+  border-bottom:0.5px solid #504946;
+}
+
+.staff p {
+  font-size:12px;
+  font-weight:600;
+  color: #504946;
+  font-family: 'Vollkorn', serif;
+  line-height: 20px;
+  margin-top:10px;
+}
+
+/*----------PRODUCTION TEAM---------------------------*/
+
+
+
+/*----------theater---------------------------*/
+#sample {
+  padding:40px 20px;
+}
+
+.sample1 h1{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.sample1 p{
+  font-family: 'Vollkorn', serif;
+  font-size:15px;
+  display: inline-block;
+  margin-left:420px;
+  border-bottom:0.5px solid #504946;
+  margin-bottom:30px;
+}
+
+#sample li {
+  margin: 0 0 30px 0;
+  float: left;
+  width: 138px;
+  height:50px;
+  border: solid 1px #fff;
+  cursor: pointer;
+  background: #504946;
+  color: #fff;
+  font-family: 'Vollkorn', serif;
+  font-size:15px;
+  text-align:center;
+}
+
+#sample ul {
+  list-style: none;
+}
+
+.district {
+  clear: both;
+  margin: 20px 0;
+  padding: 20px 40px;
+  height: auto;
+  font-size: 30px;
+  color: #504946;
+}
+
+.district h2{
+  font-family: 'Vollkorn', serif;
+  font-size:20px;
+}
+
+.district th{
+  font-family: 'Vollkorn', serif;
+  font-size:15px;
+  background-color:rgba(240, 240, 240, 0.95);
+}
+
+.todofuken {
+  width:150px;
+}
+
+.theater_name{
+  width:350px;
+}
+
+.theater_tel{
+  width:350px;
+}
+
+.schedule{
+  width:120px;
+}
+
+.district td{
+  font-family: 'Vollkorn', serif;
+  font-size:15px;
+}
+
+.btn_top {
+  text-align: right;
+  cursor: pointer;
+  color: #504946;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 0 40px;
+}
+/*----------theater---------------------------*/
+
+
+/*----------contact---------------------------*/
+#contact h1{
+  margin:40px auto 20px ;
+  text-align: center;
+  font-size: 40px;
+}
+
+#contact .form{
+  background-color: #ccc;
+  margin: 0 60px 30px;
+  padding: 10px 40px;
+}
+
+#contact .form dl dt{
+  width:150px;
+  padding: 10px 0;
+  float:left;
+  clear:both;
+  font-family: 'Vollkorn', serif;
+  font-size: 15px;
+}
+
+#contact .form dl dd{
+  padding: 10px 0;
+}
+
+#contact .form .name{
+  width:240px;
+  height:30px;
+}
+
+#contact .form .email{
+  width:240px;
+  height:30px;
+}
+
+#contact .form .tel{
+  width:240px;
+  height:30px;
+}
+
+#contact .form .message{
+  width:660px;
+  height:150px;
+}
+
+#contact .form button{
+  background-color: #504946;
+  color:#fff;
+  font-size: 13px;
+  font-family: 'Vollkorn', serif;
+  width:120px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 20px;
+  margin-right: 165px;
+  border: 1px solid #504946;
+}
+
+#contact .form button:hover{
+  background-color: #fff;
+  color:#504946;
+  cursor: pointer;
+}
+
+#contact .form .required:after{
+  content:"*";
+  color: #ff0000;
+}
+
+#contact .form .attention{
+  margin:20px 0 0 0;
+}
+
+#contact .form .attention p{
+  font-family: 'Vollkorn', serif;
+  color:#504946;
+  font-size: 13px;
+}
